@@ -8,3 +8,7 @@ app.config(['$routeProvider', function($routeProvider) {
     })
     .otherwise({redirectTo: '/gallery'})
 }]);
+
+app.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist(['**']);
+});
